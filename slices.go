@@ -1,4 +1,4 @@
-package gpad
+package helper
 
 func Contains(a []string, s string) bool {
 	for _, n := range a {

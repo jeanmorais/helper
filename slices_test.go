@@ -1,4 +1,4 @@
-package gpad
+package helper
 
 import "testing"
 
