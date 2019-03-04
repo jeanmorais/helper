@@ -48,6 +48,7 @@ func TestRightPad(t *testing.T) {
 	}{
 		{"084970589", 11, "0", "08497058900"},
 		{"golang", 8, ".", "golang.."},
+		{"golang", 6, ".", "golang"},
 	}
 
 	for _, table := range tables {
@@ -57,7 +58,6 @@ func TestRightPad(t *testing.T) {
 		}
 	}
 }
-
 
 func TestLeftPad(t *testing.T) {
 
@@ -69,12 +69,31 @@ func TestLeftPad(t *testing.T) {
 	}{
 		{"084970589", 11, "0", "00084970589"},
 		{"golang", 8, ".", "..golang"},
+		{"golang", 6, ".", "golang"},
 	}
 
 	for _, table := range tables {
 		formatted := LeftPad(table.str, table.len, table.pad)
 		if formatted != table.expected {
 			t.Errorf("Test failed. Expected %v, but returned %v", table.expected, formatted)
+		}
+	}
+}
+
+func TestReverse(t *testing.T) {
+
+	tables := []struct {
+		input    string
+		expected string
+	}{
+		{"084970589", "985079480"},
+		{"golang", "gnalog"},
+	}
+
+	for _, table := range tables {
+		reverse := Reverse(table.input)
+		if reverse != table.expected {
+			t.Errorf("Test failed. Expected %v, but returned %v", table.expected, reverse)
 		}
 	}
 }

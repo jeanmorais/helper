@@ -29,3 +29,12 @@ func formatPadding(str string, n int) string {
 	}
 	return strings.Repeat(str, n)
 }
+
+func Reverse(s string) string {
+	var b strings.Builder
+	b.Grow(len(s))
+	for i := len(s) - 1; i >= 0; i-- {
+		b.WriteByte(s[i])
+	}
+	return b.String()
+}
