@@ -6,7 +6,7 @@ helper is a collection of utilitarian functions, to facilitate working with stri
 ## Install
 
 ```
-go get github.com/jeanmorais/helper`
+go get github.com/jeanmorais/helper
 ```
 
 ## Usage
