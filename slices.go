@@ -1,5 +1,6 @@
 package helper
 
+// Contains tells whether a contains s.
 func Contains(a []string, s string) bool {
 	for _, n := range a {
 		if s == n {
