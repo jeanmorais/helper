@@ -21,6 +21,7 @@ func OnlyNumbers(str string) string {
 func LeftPad(str string, length int, pad string) string {
 	return formatPadding(pad, length-len(str)) + str
 }
+
 // RightPad adds a "padding" to the right side of the string with the value pad.
 func RightPad(str string, length int, pad string) string {
 	return str + formatPadding(pad, length-len(str))
